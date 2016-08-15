@@ -25,7 +25,7 @@ module.exports = {
             {test: /\.js$/, loader: "eslint-loader",  exclude: /node_modules/ }
         ],
         loaders: [
-            {test: /\.scss$/,loaders: ["style", "css", "autoprefixer-loader", "sass"]},
+            {test: /\.scss$/,loaders: ["style", "css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]", "autoprefixer-loader", "sass"]},
             {test: /\.jade/, loader: "jade" },
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel',
                 query: {
